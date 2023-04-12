@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chessboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 118vh;
+            width: 55vw;
+            background-color: black;
+
+        }
+
+        .box {
+            height: 80px;
+            width: 80px;
+            background-color: black;
+            display: inline-block;
+        }
+
+        .box:nth-child(odd) {
+
+            background-color: white;
+
+        }
+
+        #box11 {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/010/187/813/non_2x/elephant-chess-line-icon-illustration-vector.jpg);
+            background-size: 80px 80px;
+        }
+
+        #box12 {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/010/187/813/non_2x/elephant-chess-line-icon-illustration-vector.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #box21 {
+            background-image: url(https://www.pngkit.com/png/detail/305-3056493_horse-chess-piece-knight-horse-chess-icon-png.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box22 {
+            background-image: url(https://www.pngkit.com/png/detail/305-3056493_horse-chess-piece-knight-horse-chess-icon-png.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box31 {
+            background-image: url(https://e7.pngegg.com/pngimages/113/13/png-clipart-chess-piece-pawn-bishop-chess-white-hand.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box32 {
+            background-image: url(https://e7.pngegg.com/pngimages/113/13/png-clipart-chess-piece-pawn-bishop-chess-white-hand.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box41 {
+            background-image: url(https://img.freepik.com/premium-vector/vector-single-sketch-illustration-chess-queen-figure_574806-599.jpg);
+            background-size: 80px 80px;
+        }
+
+        #box42 {
+            background-image: url(https://www.kindpng.com/picc/m/97-971044_drawing-chess-king-clipart-queen-chess-piece-hd.png);
+            background-size: 80px 80px;
+        }
+
+
+
+
+
+
+
+
+        #box51 {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/010/187/813/non_2x/elephant-chess-line-icon-illustration-vector.jpg);
+            background-size: 80px 80px;
+        }
+
+        #box58 {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/010/187/813/non_2x/elephant-chess-line-icon-illustration-vector.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #box52 {
+            background-image: url(https://www.pngkit.com/png/detail/305-3056493_horse-chess-piece-knight-horse-chess-icon-png.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box57 {
+            background-image: url(https://www.pngkit.com/png/detail/305-3056493_horse-chess-piece-knight-horse-chess-icon-png.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box53 {
+            background-image: url(https://e7.pngegg.com/pngimages/113/13/png-clipart-chess-piece-pawn-bishop-chess-white-hand.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box56 {
+            background-image: url(https://e7.pngegg.com/pngimages/113/13/png-clipart-chess-piece-pawn-bishop-chess-white-hand.png);
+            background-size: 80px 80px;
+
+        }
+
+        #box54 {
+            background-image: url(https://img.freepik.com/premium-vector/vector-single-sketch-illustration-chess-queen-figure_574806-599.jpg);
+            background-size: 80px 80px;
+        }
+
+        #box55 {
+            background-image: url(https://www.kindpng.com/picc/m/97-971044_drawing-chess-king-clipart-queen-chess-piece-hd.png);
+            background-size: 80px 80px;
+        }
+
+
+
+
+        #p1 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p2 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p3 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p4 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p5 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p6 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p7 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #p8 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s1 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s2 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s3 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s4 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s5 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s6 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s7 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+        #s8 {
+            background-image: url(https://e7.pngegg.com/pngimages/669/663/png-clipart-chess-piece-pawn-white-and-black-in-chess-king-chess-game-king-thumbnail.png);
+            background-size: 80px 80px;
+
+        }
+
+
+
+
+
+
+
+        /* #s1 { */
+            /* background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s2 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s3 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s4 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s5 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s6 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s7 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        }
+
+        #s8 {
+            background-image: url(https://c8.alamy.com/comp/2ENPWB6/pawn-chess-piece-line-art-vector-icon-for-apps-or-website-2ENPWB6.jpg);
+            background-size: 80px 80px;
+
+        } */
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="main">
+        <div class="box" id="box11"></div>
+        <div class="box" id="box21"></div>
+        <div class="box" id="box31"></div>
+        <div class="box" id="box41"></div>
+        <div class="box" id="box42"></div>
+        <div class="box" id="box32"></div>
+        <div class="box" id="box22"></div>
+        <div class="box" id="box12"></div><br>
+        <div class="box" id="p1"></div>
+        <div class="box" id="p2"></div>
+        <div class="box" id="p3"></div>
+        <div class="box" id="p4"></div>
+        <div class="box" id="p5"></div>
+        <div class="box" id="p6"></div>
+        <div class="box" id="p7"></div>
+        <div class="box" id="p8"></div><br>
+        <div class="box" class="box1"></div>
+        <div class="box" class="box2"></div>
+        <div class="box" class="box3"></div>
+        <div class="box" class="box4"></div>
+        <div class="box" class="box5"></div>
+        <div class="box" class="box6"></div>
+        <div class="box" class="box7"></div>
+        <div class="box" class="box8"></div><br>
+        <div class="box" class="box1"></div>
+        <div class="box" class="box2"></div>
+        <div class="box" class="box3"></div>
+        <div class="box" class="box4"></div>
+        <div class="box" class="box5"></div>
+        <div class="box" class="box6"></div>
+        <div class="box" class="box7"></div>
+        <div class="box" class="box8"></div><br>
+        <div class="box" class="box1"></div>
+        <div class="box" class="box2"></div>
+        <div class="box" class="box3"></div>
+        <div class="box" class="box4"></div>
+        <div class="box" class="box5"></div>
+        <div class="box" class="box6"></div>
+        <div class="box" class="box7"></div>
+        <div class="box" class="box8"></div><br>
+        <div class="box" class="box1"></div>
+        <div class="box" class="box2"></div>
+        <div class="box" class="box3"></div>
+        <div class="box" class="box4"></div>
+        <div class="box" class="box5"></div>
+        <div class="box" class="box6"></div>
+        <div class="box" class="box7"></div>
+        <div class="box" class="box8"></div><br>
+        <div class="box" id="s1"></div>
+        <div class="box" id="s2"></div>
+        <div class="box" id="s3"></div>
+        <div class="box" id="s4"></div>
+        <div class="box" id="s5"></div>
+        <div class="box" id="s6"></div>
+        <div class="box" id="s7"></div>
+        <div class="box" id="s8"></div><br>
+        <div class="box" id="box51"></div>
+        <div class="box" id="box52"></div>
+        <div class="box" id="box53"></div>
+        <div class="box" id="box54"></div>
+        <div class="box" id="box55"></div>
+        <div class="box" id="box56"></div>
+        <div class="box" id="box57"></div>
+        <div class="box" id="box58"></div>
+    </div>
+</body>
+
+</html>
